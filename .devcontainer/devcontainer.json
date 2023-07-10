@@ -1,0 +1,23 @@
+{
+    "name": "python-env-tutorial",
+    "image": "node:20.2",
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "antfu.slidev",
+                "github.vscode-pull-request-github",
+                "mhutchie.git-graph",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.trimTrailingWhitespace": true,
+                "[markdown]": {
+                    "editor.insertSpaces": true,
+                    "editor.wordWrap": "on"
+                }
+            }
+        }
+    }
+}

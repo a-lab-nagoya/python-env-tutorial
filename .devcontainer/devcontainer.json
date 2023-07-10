@@ -5,8 +5,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "antfu.slidev",
                 "github.vscode-pull-request-github",
+                "marp-team.marp-vscode",
                 "mhutchie.git-graph",
                 "streetsidesoftware.code-spell-checker"
             ],

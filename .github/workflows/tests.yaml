@@ -12,8 +12,7 @@ jobs:
   job:
     name: Build
     runs-on: ubuntu-latest
+    container: node:20.2
     steps:
       - uses: actions/checkout@v3
-      - uses: devcontainers/ci@v0.3
-        with:
-          runCmd: npx slidev build
+      - run: npm install && npx marp slides.md

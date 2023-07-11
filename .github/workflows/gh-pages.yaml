@@ -1,0 +1,25 @@
+name: GitHub Pages
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  job:
+    name: GitHub Pages
+    runs-on: ubuntu-latest
+    container: node:20.2
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build HTML slides
+        run: |
+          npm install
+          npx marp slides.md -o build/index.html
+      - names: Publish HTML slides
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          destination_dir: ${{ GITHUB_REF_NAME }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: build

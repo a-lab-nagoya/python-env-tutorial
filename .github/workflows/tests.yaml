@@ -15,4 +15,7 @@ jobs:
     container: node:20.2
     steps:
       - uses: actions/checkout@v3
-      - run: npm install && npx marp slides.md
+      - name: Build HTML slides
+        run: |
+          npm install
+          npx marp slides.md

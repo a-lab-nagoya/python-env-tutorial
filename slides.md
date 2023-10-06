@@ -262,7 +262,7 @@ $ brew install poetry # "This build of python ... symlinks"に遭遇したらこ
 Poetryが仮想環境をプロジェクト配下に作成するように設定しておくと分かりやすい（デフォルトでは全く別の場所に作られる）。
 
 ```shell
-$ poetry config virtualenvs.create true
+$ poetry config virtualenvs.in-project true
 ```
 
 ---
